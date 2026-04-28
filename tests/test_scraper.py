@@ -25,3 +25,5 @@ def test_parse_anime_list_empty():
     result = parse_anime_list('<div>rien</div>')
     assert result == []
 # Demo final
+
+# je veux avoir un 10
