@@ -27,4 +27,5 @@ def test_parse_anime_list_empty():
 # Demo final
 
 # je veux avoir un 10
-# je suis fatiguer 
+# je suis fatiguer
+# aeertf
