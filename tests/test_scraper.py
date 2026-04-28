@@ -24,3 +24,4 @@ def test_parse_anime_list_with_multiple_items():
 def test_parse_anime_list_empty():
     result = parse_anime_list('<div>rien</div>')
     assert result == []
+# Demo final
