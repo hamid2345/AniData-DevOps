@@ -20,5 +20,17 @@ def test_parse_anime_list_with_multiple_items():
     assert result[1]['title'] == 'One Piece'
 
 def test_parse_anime_list_empty():
-    result = parse_anime_list("<div>rien</div>")
+    html = "<div>rien</div>"
+    result = parse_anime_list(html)
     assert result == []
+
+def test_parse_anime_list_missing_fields():
+    html = '''
+    <div class="anime-item">
+        <span class="title">Only Title</span>
+    </div>
+    '''
+    result = parse_anime_list(html)
+    assert len(result) == 1
+    assert result[0]['title'] == 'Only Title'
+    assert result[0]['rating'] == 'N/A'
