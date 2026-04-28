@@ -1,3 +1,4 @@
+
 name: CI/CD Pipeline
 
 on:
@@ -19,10 +20,12 @@ jobs:
       
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install ruff pytest requests beautifulsoup4
+          pip install -r requirements.txt
       
       - name: Lint with ruff
-        run: ruff check .
+        run: ruff check src/
       
       - name: Test with pytest
         run: pytest tests/ -v
